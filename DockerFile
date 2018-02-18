@@ -22,8 +22,8 @@ RUN groupadd -r greg && useradd -r -g greg greg && echo "greg:greg" | chpasswd &
 RUN mkdir -p /home/greg/ && chown greg:greg /home/greg/
 
 # Setup editor diretory
-VOLUME /home/greg/dotfiles C:\Users\Greg\dev\docker\development\dev-env
-COPY dev-env /home/greg/dotfiles
+VOLUME /home/greg/dotfiles ./dev-env
+COPY ./dev-env /home/greg/dotfiles
 
 USER greg
 RUN bash /home/greg/dotfiles/docker-startup.sh
