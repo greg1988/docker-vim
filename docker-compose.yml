@@ -1,0 +1,17 @@
+version: '3.2'
+services:
+  dev:
+    build: .
+    image: development
+    # volumes:
+    #   - type: bind
+    #     source: C:\Users\Greg\dev\docker\development\dev-env
+    #     target: /home/greg/dotfiles
+
+  # data-container:
+  #   image: development
+  #   volumes:
+  #     - type: bind
+  #       source: C:\Users\Greg\dev\docker\development\dev-env
+  #       target: /home/greg
+  #   command: "chown greg:greg /home/greg"
